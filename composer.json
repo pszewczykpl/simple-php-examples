@@ -17,6 +17,8 @@
     "phpunit/phpunit": "^9"
   },
   "autoload": {
-    "classmap": ["Behavioral", "Creational", "Structural", "More"]
+    "psr-4": {
+      "SimpleExamples\\": "src/"
+    }
   }
 }
