@@ -8,8 +8,8 @@ class Context
         private readonly Strategy $strategy
     ) {}
 
-    public function executeStrategy($a, $b): int
+    public function doSomething(): int
     {
-        return $this->strategy->execute($a, $b);
+        return $this->strategy->execute(a: 1, b: 2);
     }
 }

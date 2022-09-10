@@ -14,11 +14,12 @@ final class Singleton
         return self::$instance;
     }
 
-    public function __construct() {}
+    public function __wakeup()
+    {
+        throw new Exception(message: "Cannot unserialize Singleton");
+    }
+
+    private function __construct() {}
 
     private function __clone() {}
-
-    public function __wakeup() {
-        throw new Exception("Cannot unserialize Singleton");
-    }
 }

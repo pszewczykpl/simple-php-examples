@@ -1,3 +1,5 @@
-# Singleton
-## Czym jest Singleton?
-## Zastosowania
+# Singleton (Singleton)
+## Zastosowanie
+```php
+$singleton = Singleton::getInstance();
+```
