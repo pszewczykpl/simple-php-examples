@@ -2,5 +2,5 @@
 ## Zastosowanie
 ```php
 $factory = new ConcreteFactory1();
-$factory.createProductA();
+$factory->createProductA();
 ```
