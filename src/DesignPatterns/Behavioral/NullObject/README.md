@@ -1,0 +1,12 @@
+# Pusty obiekt (NullObject)
+## Opis
+Wzorzec projektowy "Pusty obiekt" (ang. Null Object) to sposób na uniknięcie sprawdzania for null wartości obiektu przed wywołaniem jego metod lub dostępem do jego właściwości. Wzorzec ten pozwala na zastąpienie pustego obiektu specjalnym obiektem, który zachowuje się tak, jakby był rzeczywistym obiektem, ale nie wykonuje żadnych operacji.
+
+Wzorzec projektowy "Pusty obiekt" składa się z następujących elementów:
+1. Interfejs lub klasa abstrakcyjna, definiująca metody i właściwości obiektu.
+2. Klasa konkretnego obiektu, implementująca interfejs lub dziedzicząca po klasie abstrakcyjnej i zawierająca kod do wykonywania operacji.
+3. Klasa pustego obiektu, implementująca interfejs lub dziedzicząca po klasie abstrakcyjnej, ale nie zawierająca żadnego kodu do wykonywania operacji.
+
+Przykładem zastosowania wzorca projektowego "Pusty obiekt" jest aplikacja do zarządzania użytkownikami, która pozwala na zalogowanie się jako gość lub zarejstrować nowego użytkownika. Klasa użytkownika jest obiektem, a klasa gościa jest pustym obiektem. Gdy użytkownik chce zalogować się jako gość, aplikacja tworzy obiekt gościa i przekazuje go do klasy użytkownika. Klasa użytkownika nie musi sprawdzać, czy przekazano jej pusty obiekt, ponieważ klasa gościa zachowuje się tak, jakby była rzeczywistym obiektem, ale nie wykonuje żadnych operacji. Dzięki temu kod aplikacji jest bardziej czytelny i łatwiejszy do zmiany, ponieważ nie ma konieczności sprawdzania for null wartości obiektu.
+
+Innym przykładem zastosowania wzorca projektowego "Pusty obiekt" jest aplikacja do zarządzania zamówieniami, która pozwala na dodawanie nowych pozycji do zamówienia lub usuwanie istniejących pozycji. Klasa pozycji zamówienia jest obiektem, a klasa pustej pozycji zamówienia jest pustym obiektem. Gdy użytkownik chce usunąć pozycję z zamówienia, aplikacja tworzy obiekt pustej pozycji zamówienia i przekazuje go do klasy pozycji zamówienia. Klasa pozycji zamówienia nie musi sprawdzać, czy przekazano jej pusty obiekt, ponieważ klasa pustej pozycji zamówienia zachowuje się tak, jakby była rzeczywistą pozycją zamówienia, ale nie wykonuje żadnych operacji. Dzięki temu kod aplikacji jest bardziej czytelny i łatwiejszy do zmiany, ponieważ nie ma konieczności sprawdzania for null wartości obiektu.

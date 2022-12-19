@@ -1,0 +1,10 @@
+# Łańcuch zobowiązań
+## Opis
+Wzorzec projektowy "Łańcuch zobowiązań" (ang. Chain of Responsibility) to sposób na przekazywanie prośby pomiędzy obiektami tak, aby żaden z nich nie był odpowiedzialny za jej obsługę. Prośba jest przekazywana od obiektu do obiektu w łańcuchu aż do momentu, gdy zostanie obsłużona. Wzorzec ten pozwala na dynamiczne przypisywanie odpowiedzialności do obiektów.
+
+Wzorzec projektowy "Łańcuch zobowiązań" składa się z następujących elementów:
+1. Interfejs lub klasa abstrakcyjna, definiująca metody do pracy z prośbą i łańcuchem zobowiązań.
+2. Klasy konkretne, implementujące interfejs lub dziedziczące po klasie abstrakcyjnej i zawierające kod do obsługi prośby lub przekazywania jej dalej w łańcuchu.
+3. Klasa klienta, która tworzy łańcuch zobowiązań i przekazuje prośbę do niego za pomocą metod interfejsu lub klasy abstrakcyjnej.
+
+Przykładem zastosowania wzorca projektowego "Łańcuch zobowiązań" jest system obsługi zgłoszeń do działu IT w firmie. Każde zgłoszenie ma określone priorytety i może być obsłużone przez różne osoby lub grupy w zależności od ich uprawnień. Klasy konkretne to osoby lub grupy odpowiedzialne za obsługę zgłoszeń, a łańcuch zobowiązań to sekwencja tych klas, w której prośba jest przekazywana od jednej klasy do następnej aż do momentu, gdy zostanie obsłużona. Klasa klienta tworzy łańcuch zobowiązań i przekazuje prośbę do niego za pomocą metod interfejsu lub klasy abstrakcyjnej, a następnie łańcuch zobowiązań przekazuje prośbę od jednej klasy do następnej, aż do momentu, gdy zostanie obsłużona. W ten sposób każda klasa w łańcuchu zobowiązań ma szansę zająć się prośbą, jeśli ma odpowiednie uprawnienia do jej obsługi. W przeciwnym razie prośba jest przekazywana dalej w łańcuchu. Dzięki temu każda klasa jest odpowiedzialna tylko za obsługę prośby, jeśli ma odpowiednie uprawnienia, a kod jest bardziej elastyczny i łatwiejszy do zmiany, ponieważ zmiana sposobu obsługi prośby nie wpływa na kod klienta.

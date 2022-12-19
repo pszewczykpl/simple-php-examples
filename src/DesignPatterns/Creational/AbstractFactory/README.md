@@ -1,6 +1,12 @@
 # Fabryka abstrakcyjna (Abstract Factory)
-## Zastosowanie
-```php
-$factory = new ConcreteFactory1();
-$factory->createProductA();
-```
+## Opis
+Wzorzec projektowy "Fabryka abstrakcyjna" (ang. Abstract Factory) to sposób tworzenia obiektów, który pozwala uniezależnić kod klienta od konkretnych klas tworzących obiekty. Wzorzec ten jest podobny do wzorca projektowego "Metoda wytwórcza", ale różni się tym, że skupia się na tworzeniu całych grup powiązanych obiektów zamiast pojedynczych obiektów.
+
+Wzorzec projektowy "Fabryka abstrakcyjna" składa się z kilku elementów:
+1. Interfejs lub klasa abstrakcyjna Fabryka, definiująca metody wytwórcze zwracające obiekty interfejsu lub klasy abstrakcyjnej.
+2. Konkretne klasy Fabryka, implementujące interfejs lub dziedziczące po klasie abstrakcyjnej Fabryka, które są odpowiedzialne za tworzenie konkretnych obiektów.
+3. Interfejsy lub klasy abstrakcyjne dla obiektów, które mogą być tworzone przez fabrykę.
+4. Konkretne klasy implementujące interfejsy lub dziedziczące po klasach abstrakcyjnych dla obiektów, które są odpowiedzialne za ich reprezentację.
+5. Klasa klienta, która korzysta z interfejsu lub klasy abstrakcyjnej Fabryka, aby tworzyć obiekty, ale nie jest zależna od konkretnych klas Fabryka ani obiektów, z których tworzone są obiekty.
+
+Przykładem zastosowania wzorca projektowego "Fabryka abstrakcyjna" jest program do tworzenia interfejsów użytkownika dla różnych platform (np. web, mobilny). Klasa klienta chce utworzyć nowy interfejs użytkownika, ale nie jest zależna od konkretnych klas tworzących interfejsy dla poszczególnych platform. Zamiast tego korzysta z interfejsu lub klasy abstrakcyjnej Fabryka, definiującej metody wytwórcze, które zwracają odpowiednie obiekty interfejsu lub klasy abstrakcyjnej dla komponentów interfejsu użytkownika (np. przyciski, pola tekstowe). Można zdefiniować różne klasy Fabryka, odpowiedzialne za tworzenie interfejsów dla różnych platform (np. web, mobilny) lub z różnymi motywami (np. jasnym, ciemnym). Klasa klienta może wybrać odpowiednią klasę Fabryka w zależności od potrzeb i skorzystać z jej interfejsu lub klasy abstrakcyjnej, aby utworzyć nowy interfejs użytkownika. Dzięki temu kod jest bardziej elastyczny i łatwiejszy do zmiany, ponieważ zmiana sposobu tworzenia interfejsu użytkownika nie wpływa na kod klienta, a jedynie na wybraną klasę Fabryka.
