@@ -3,6 +3,7 @@
 namespace SimpleExamples\DesignPatterns\Creational\Singleton\Example;
 
 use Exception;
+use PDO;
 
 final class Singleton
 {
